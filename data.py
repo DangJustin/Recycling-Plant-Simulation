@@ -26,7 +26,7 @@ def main(containers):
         accuracy_list.append((frequency, accuracy))
     x, y = zip(*accuracy_list)
     plt.scatter(x, y)
-    plt.title("Accuracy vs Speed")
+    plt.title("Accuracy vs Frequency")
     plt.ylabel("Accuracy")
     plt.xlabel("Frequency")
     plt.show()
