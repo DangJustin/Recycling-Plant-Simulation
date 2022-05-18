@@ -1,0 +1,32 @@
+sorting_Function(sensor_output):
+	max = max of spectrum from sensor_output
+	mean = mean of spectrum from sensor_output
+	if max in second half of spectrum:
+		if 2*max of first half > max
+			plastic = PP
+		else:
+			if max of first half > mean:
+				plastic = LDPE
+			else:
+				plastic = HDPE
+	else:
+		if max near first quarter of spectrum:
+			if max of second half > mean:
+				if max of last quarter > mean:
+					plastic = PU
+				else:
+					plastic = Polyester
+			
+			else:
+				plastic = PET
+		else:
+			if max in first tenth of spectrum:
+				plastic = PVC
+			else:
+				if max in first fifth of spectrum:
+					plastic = PS
+				else:
+					plastic = PC
+	
+	return plastic
+	
